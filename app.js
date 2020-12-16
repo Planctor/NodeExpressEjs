@@ -12,3 +12,10 @@ console.log(calculadora.dividir(5,5))
 console.log(calculadora.multiplicar(5,5))
 console.log(calculadora.subtrair(5,5))
 console.log(calculadora.somar(5,5))
+
+const servidor = require("http")
+servidor.createServer((req, res)=>{
+    res.end("<h1>coma alho</h1>")
+}).listen(2424)
+
+console.log("COMA ALHO, AGORA")
