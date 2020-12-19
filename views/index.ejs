@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NODE</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1>Seja Welcomido!</h1>
+    <!-- <%= %> exibr uma variavel, no ejs-->
+    <h3><%= nome %></h3>
+    <% if(m === true){ %>
+        <h4>true</h4>
+    <%}else{%>
+        <h4>false</h4>
+    <%}%>    
+    <h3><%= lang %></h3>
+    <h3><%= empresa %></h3>
+    <h3><%= quantidade %></h3>
+    <div style="display: block;">
+        <% product.forEach((item)=>{ %>
+            <p>
+                <%= item.nome %>
+            </p>
+            <p>
+                <%= item.preco %>
+            </p>
+            <p>
+                <%= item.poder %>
+            </p>
+        <%})%>
+    </div>
+</body>
+</html>
