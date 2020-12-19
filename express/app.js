@@ -38,3 +38,24 @@ app.listen(2424 ,(err)=>{
         console.log("foi")
     }
 })
+
+app.get("/:nome?",(req,res)=>{
+    const nome = req.params.nome
+    const lang = "js"
+    const msg = true
+    const produtos = [
+        {nome:"Alho", preco: 24, poder:"ser muito bom"},
+        {nome:"batata", preco: 24324, poder:"ser muito bom"},
+        {nome:"feijão", preco: 4, poder:"ser muito bom"},
+        {nome:"pizza de feijão", preco: 0, poder:"ser muito bom"},
+        {nome:"pizza de amendoin", preco: 264, poder:"ser muito bom"},
+    ]
+    res.render("index",{
+        nome,
+        lang,
+        empresa: "alho",
+        quantidade: 24,
+        m: msg,
+        product: produtos
+    })//como está com o render ejs ele ja busca o diretorio views
+})
